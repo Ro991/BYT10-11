@@ -1,7 +1,6 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Trip {
     private ArrayList<Route> routes;
@@ -10,6 +9,17 @@ public class Trip {
     private Location origin;
     private Location finalDestination;
     private ArrayList<Accommodation> accommodation;
+
+    public Trip(LocalDate startDateTime, LocalDate endDateTime, Location origin, Location finalDestination) {
+        this.startDateTime = startDateTime;
+        this.endDateTime = endDateTime;
+        this.origin = origin;
+        this.finalDestination = finalDestination;
+    }
+
+    public Trip(Location origin, Location finalDestination) {
+        this(null, null, origin, finalDestination);
+    }
 
     public BigDecimal tripCost() {
         return null;
@@ -59,11 +69,11 @@ public class Trip {
         this.startDateTime = startDateTime;
     }
 
-    public void addRoute() {
+    public void addRoute(Route route) {
 
     }
 
-    public void addAccommodation() {
+    public void addAccommodation(Accommodation accommodation) {
 
     }
 }
