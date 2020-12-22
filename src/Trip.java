@@ -10,14 +10,18 @@ public class Trip {
     private Location finalDestination;
     private ArrayList<Accommodation> accommodation;
 
-    public Trip(LocalDate startDateTime, LocalDate endDateTime, Location origin, Location finalDestination) {
+    public Trip(LocalDate startDateTime, LocalDate endDateTime, Location origin, Location finalDestination) throws Exception {
+        if(startDateTime.compareTo(endDateTime) < 0) {
+            throw new Exception("start date is before end time");
+        }
+
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.origin = origin;
         this.finalDestination = finalDestination;
     }
 
-    public Trip(Location origin, Location finalDestination) {
+    public Trip(Location origin, Location finalDestination) throws Exception {
         this(null, null, origin, finalDestination);
     }
 
