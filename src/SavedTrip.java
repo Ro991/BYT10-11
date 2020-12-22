@@ -1,17 +1,17 @@
 public class SavedTrip {
-    private int tripId;
+    private String tripId;
     private String tripName;
 
-    public SavedTrip(int tripId, String tripName){
+    public SavedTrip(String tripId, String tripName){
         this.tripId = tripId;
         this.tripName = tripName;
     }
 
-    public int getTripId() {
+    public String getTripId() {
         return tripId;
     }
 
-    public void setTripId(int tripId) {
+    public void setTripId(String tripId) {
         this.tripId = tripId;
     }
 
@@ -23,7 +23,7 @@ public class SavedTrip {
         this.tripName = tripName;
     }
     public Trip editTrip(Trip trip){
-        return null;
+        return trip;
     }
     public void deleteTrip(Trip selectedTrip){
 
