@@ -23,7 +23,7 @@ public class SavedTrip {
         this.tripName = tripName;
     }
     public Trip editTrip(Trip trip){
-
+        return null;
     }
     public void deleteTrip(Trip selectedTrip){
 
