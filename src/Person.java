@@ -1,14 +1,14 @@
 public abstract class Person {
-    private int id;
-    public Person(int id){
+    private String id;
+    public Person(String id){
         this.id = id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

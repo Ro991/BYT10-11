@@ -1,6 +1,6 @@
 public class UnauthorizedUser extends Person {
 
-    public UnauthorizedUser(int id) {
+    public UnauthorizedUser(String id) {
         super(id);
     }
     public void login(String username, String password){
